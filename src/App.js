@@ -23,6 +23,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { News } from "./components/news";
+import { PersonList } from "./components/person";
+
 
 const BasicExample = () => (
     <Router>
@@ -40,6 +42,9 @@ const BasicExample = () => (
                 <li>
                     <Link to="/news">News</Link>
                 </li>
+                <li>
+                    <Link to="/person">Person</Link>
+                </li>
             </ul>
 
             <hr />
@@ -48,6 +53,7 @@ const BasicExample = () => (
             <Route path="/about" component={About} />
             <Route path="/topics" component={Topics} />
             <Route path="/news" component={News} />
+            <Route path="/person" component={PersonList} />
         </div>
     </Router>
 );

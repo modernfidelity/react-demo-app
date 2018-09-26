@@ -1,8 +1,19 @@
 
 import React from "react";
+import axios from "axios";
 
 function count() {
-    return "i am bob";
+
+
+
+    axios.get('https://api.github.com/users/modernfidelity')
+        .then(function(response){
+            console.log(response.data); // ex.: { user: 'Your User'}
+            console.log(response.status); // ex.: 200
+
+            return response;
+        });
+
 }
 
 export const News = () => (
